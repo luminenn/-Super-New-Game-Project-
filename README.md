@@ -1,8 +1,9 @@
 # -Super-New-Game-Project-
-basic code for basic 2d game functions
+basic code for basic 2d game functions on GoDot
 
 extends CharacterBody2D
 
+left to right 2d movement with directionality 
 
 func _physics_process(delta: float) -> void:
 	var h_input: float
