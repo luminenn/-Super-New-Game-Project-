@@ -3,7 +3,7 @@ basic code for basic 2d game functions on GoDot
 
 extends CharacterBody2D
 
-left to right 2d movement with directionality 
+left to right 2d movement with directionality.
 additionally, up to down 2d movement 
 
 	func _physics_process(delta: float) -> void:
