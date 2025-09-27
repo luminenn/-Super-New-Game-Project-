@@ -6,7 +6,7 @@ extends CharacterBody2D
 left to right 2d movement with directionality 
 additionally, up to down 2d movement 
 
-func _physics_process(delta: float) -> void:
+	func _physics_process(delta: float) -> void:
 	var h_input: float
 	h_input = Input.get_axis("ui_left", "ui_right")
 	
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-  var a_input: float
+ 	 var a_input: float
 	a_input = Input.get_axis("ui_up", "ui_down")
 	
 	velocity.y = a_input * 300
