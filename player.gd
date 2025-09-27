@@ -7,7 +7,7 @@ func _physics_process(delta: float) -> void:
 	if h_input == 1:
 		$Sprite2D.flip_h = false
 	if h_input == -1:
-			$Sprite2D.flip_h = true
+		$Sprite2D.flip_h = true
 	
 	velocity.x = h_input * 300
 	
