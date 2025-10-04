@@ -1,15 +1,19 @@
 extends CharacterBody2D
 
+const gravity: float = 3000
+const jump_speed: float = 600
+
 func _physics_process(delta: float) -> void:
 	
-	var angular_speed = 2*PI
+	var angular_speed = 4*PI
 	if Input.is_action_pressed("test_spin"): 
 		$Sprite2D.rotation += angular_speed*delta
 	
-	var rangular_speed = -2*PI
+	var rangular_speed = -4*PI
 	if Input.is_action_pressed("test_reverse_spin"): 
 		$Sprite2D.rotation += rangular_speed*delta
 	
+	# Horizontal Movement
 	var h_input: float
 	h_input = Input.get_axis("test_left", "test_right")
 	
@@ -18,14 +22,12 @@ func _physics_process(delta: float) -> void:
 	if h_input == -1:
 		$Sprite2D.flip_h = true
 	
-	velocity.x = h_input * 300
+	velocity.x = h_input * 150
 	
 	move_and_slide()
 	
-	var a_input: float
-	a_input = Input.get_axis("test_up", "test_down")
+	if Input.is_action_pressed("test_jump") and is_on_floor():
+		velocity.y = -jump_speed 
 	
-	velocity.y = a_input * 300
-	
-	move_and_slide()
+	velocity.y += gravity * delta
 	
