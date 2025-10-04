@@ -2,5 +2,4 @@
 basic code for basic 2d game functions on GoDot
 
 player.gd: 
-left to right 2d movement with directionality.
-additionally, up to down 2d movement. also, spin. 
+left to right 2d movement with directionality, alongwith jump mechanics and manual spin. 
