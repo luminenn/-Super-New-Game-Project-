@@ -26,3 +26,16 @@ var score = 0
 func add_point():
   score += 1
   print(score) 
+
+#if the desire is to include an in-world text with "x" amount of collected coins, then:
+#include ScoreLabel node and place where ever
+
+extends Node
+
+var score = 0 
+
+@onready var score_label = $ScoreLabel
+
+func add_point():
+  score += 1 
+  score_label.text = "You collected " + str(score) + " coins!" 
